@@ -1,4 +1,4 @@
-# GiayKhenGen
+# Giấy khen generator
 
 *Trình tạo khen giấy / Giấy khen generator*
 
