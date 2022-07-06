@@ -1,6 +1,6 @@
 # Giấy khen generator
 
-*Trình tạo khen giấy / Giấy khen generator*
+*Trình tạo giấy khen / Giấy khen generator*
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.4.
 
