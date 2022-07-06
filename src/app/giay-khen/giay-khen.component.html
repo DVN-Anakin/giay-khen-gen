@@ -1,0 +1,18 @@
+<section [class]="'gk-mode-' + mode">
+    <app-controls [mode]="mode" (modeChangePreview)="modeSetPreview()" (modeChangeEdit)="modeSetEdit()" (triggerSaveConfig)="saveConfig()"></app-controls>
+    <div *ngIf="mode == 'edit' && contentsEditorIndex" class="gk-editor">
+        <span class="gk-editor__index">{{ contentsEditorIndex }}</span>
+        <quill-editor [(ngModel)]="contentsEditor" [placeholder]="'Chỉnh sửa văn bản'" (ngModelChange)="onContentsEditorChange()"></quill-editor>
+    </div>
+    <div id="gk-frame" class="gk-frame">
+        <div class="gk-drum">
+            <div class="gk-emblem"></div>
+        </div>
+        <ng-container *ngFor="let item of contents.data">
+            <div *ngIf="item.isWrapper" class="gk-content-wrapper gk-content-wrapper--{{item.id}}">
+                <div *ngFor="let item1 of item.data" class="gk-content--{{item1.id}}" [innerHtml]="item1.value" [attr.data-index]="item1.index" (click)="editContent($event, item1)"></div>
+            </div>
+            <div *ngIf="!item.isWrapper" class="gk-content gk-content--{{item.id}}" [innerHtml]="item.value" [attr.data-index]="item.index" (click)="editContent($event, item)"></div>
+        </ng-container>
+    </div>
+</section>

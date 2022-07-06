@@ -1,23 +1,32 @@
 {
   "name": "giay-khen-gen",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "author": "Pham The Anh",
+  "main": "app.js",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "serve": "ng serve",
+    "start": "ng build --base-href ./ && electron .",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "prerelease": "npm run build --prod",
+    "release": "electron-builder"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "^14.0.0",
+    "@angular/cdk": "^14.0.4",
     "@angular/common": "^14.0.0",
     "@angular/compiler": "^14.0.0",
     "@angular/core": "^14.0.0",
     "@angular/forms": "^14.0.0",
+    "@angular/material": "^14.0.4",
     "@angular/platform-browser": "^14.0.0",
     "@angular/platform-browser-dynamic": "^14.0.0",
     "@angular/router": "^14.0.0",
+    "ngx-quill": "^17.1.1",
+    "quill": "^1.3.7",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
@@ -27,6 +36,9 @@
     "@angular/cli": "~14.0.4",
     "@angular/compiler-cli": "^14.0.0",
     "@types/jasmine": "~4.0.0",
+    "@types/quill": "^1.3.10",
+    "electron": "^19.0.7",
+    "electron-builder": "^23.1.0",
     "jasmine-core": "~4.1.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",
@@ -34,5 +46,13 @@
     "karma-jasmine": "~5.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
     "typescript": "~4.7.2"
+  },
+  "build": {
+    "appId": "giay.khen.gen",
+    "productName": "Giay Khen Generator",
+    "files": [
+      "app.js",
+      "dist/giay-khen-gen"
+    ]
   }
 }
