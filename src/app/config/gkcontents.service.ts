@@ -37,7 +37,7 @@ const GK_CONTENTS: GKContentsInterface = {
     }, {
       index: 4,
       id: 'text4',
-      value: 'Cháu Béo Thị Yen<br>dã có thành tích tốt trong học tập<br>năm học 2021-2022'
+      value: 'Cháu Béo Thị Yen<br>đã có thành tích tốt trong học tập<br>năm học 2021-2022'
     }, {
       id: 'signature',
       isWrapper: true,
