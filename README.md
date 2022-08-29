@@ -2,6 +2,8 @@
 
 *Trình tạo giấy khen / Giấy khen generator*
 
+![GKG 2022](kids1.jpg) ![GKG 2022](kids2.jpg)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.4.
 
 ## Development server
